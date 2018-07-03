@@ -84,15 +84,13 @@ public class Creator {
 
     private void handleMouseEvent(MouseEvent mevent) {
         if (mevent.getSource() == start) {
-           
-            MenuWindow mw = new MenuWindow();
-            mw.setNewScene("choosing leader");
+           root.getChildren().clear();
         }
         if (mevent.getSource() == biopedia) {
-
+            root.getChildren().clear();
         }
         if (mevent.getSource() == quit) {
-
+            System.exit(0);
         }
 
     }
