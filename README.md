@@ -1,4 +1,4 @@
-**Bionicle War**
+##Bionicle War
 
 Bionicle War is a strategic game in which you are able to become a leader of Hero Factory, Matorans, Crossbreeds or The Brotherhood of Makuta. Except the civilizations there are also two tribes: Pirakas and Barracks that will try to disturb you in winning the game. You have to gain the highest score to win. You can do that by conquering huge cities or developing your civilization. The choice is yours.
 
