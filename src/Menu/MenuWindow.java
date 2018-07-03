@@ -4,6 +4,7 @@ import java.io.File;
 
 import javafx.application.Application;
 import javafx.embed.swing.JFXPanel;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.Pane;
@@ -19,13 +20,19 @@ public class MenuWindow extends Application {
     private Button settings;
     private Button quit;
     private Creator creator;
-
+    private Scene scene;
+    private boolean choosingLeader = false;
+    
     @Override
     public void start(Stage stage) throws Exception {
 
         creator = new Creator(root, start, settings, quit);
-
-        Scene scene = new Scene(creator.createComponents());
+        if(choosingLeader) {
+            scene = new Scene(creator.chooseLeader());
+        } else {
+            scene = new Scene(creator.createComponents());
+            
+        }
 
         stage.setScene(scene);
         stage.setTitle("Bionicle War");
@@ -44,5 +51,12 @@ public class MenuWindow extends Application {
         mediaPlayer.play();
         
         launch(MenuWindow.class);
+    }
+    
+    public void setNewScene(String message) {
+        if(message.equals("choosing leader")) {
+            choosingLeader = true;
+        }
+        
     }
 }
