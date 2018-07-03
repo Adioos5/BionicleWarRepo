@@ -11,27 +11,31 @@ import javafx.scene.layout.Pane;
 public class Creator {
 
     private Pane root;
-    private Pane chooseLeaderRoot;
-    
+
     private Image mataNui = new Image("images/MataNui.jpg");
+    private Image mataNuis = new Image("images/leaderChoosingImage.jpg");
+    private Image tipImg = new Image("images/tip.png");
+    
     private Button start;
     private Button biopedia;
     private Button quit;
+    private ImageView menuBackground;
     
     public Creator(Pane root, Button start, Button settings, Button quit) {
         this.root = root;
 
     }
 
-    public Parent createComponents() {
+    public void createComponents() {
+
         root = new Pane();
 
         // Background
-        ImageView iv = new ImageView(mataNui);
-        iv.setX(0);
-        iv.setY(0);
-        iv.setFitWidth(1370);
-        iv.setFitHeight(800);
+        menuBackground = new ImageView(mataNui);
+        menuBackground.setX(0);
+        menuBackground.setY(0);
+        menuBackground.setFitWidth(1370);
+        menuBackground.setFitHeight(800);
 
         // start button
         start = new Button();
@@ -68,26 +72,85 @@ public class Creator {
         quit.setOnMouseClicked(event -> {
             handleMouseEvent(event);
         });
+        
 
-        root.getChildren().add(iv);
+    }
+    
+    public Pane displayMenu() {
+        createComponents();                
+        
+        root.getChildren().add(menuBackground);
         root.getChildren().add(start);
         root.getChildren().add(biopedia);
         root.getChildren().add(quit);
-
-        return root;
-    }
-    public Pane chooseLeader() {
-        Pane root = new Pane();
+        
         return root;
     }
     
+    public void displayLeaderChoosing() {
+      
+        //background
+        ImageView leaderChoosingImage = new ImageView(mataNuis);
+        leaderChoosingImage.setX(0);
+        leaderChoosingImage.setY(0);
+        leaderChoosingImage.setFitWidth(1370);
+        leaderChoosingImage.setFitHeight(800);
+        
+        //tip
+        ImageView tip = new ImageView(tipImg);
+        tip.setX(0);
+        tip.setY(670);
+        tip.setFitWidth(1370);
+        tip.setFitHeight(100);
+        
+        //buttons
+        Button heroFactory = new Button();
+        //matorans.setStyle("-fx-background-image: url(images/quit.png)");
+        heroFactory.setTranslateX(0);
+        heroFactory.setTranslateY(30);
+        heroFactory.setPrefWidth(300);
+        heroFactory.setPrefHeight(550);
 
+        Button matorans = new Button();
+        //matorans.setStyle("-fx-background-image: url(images/quit.png)");
+        matorans.setTranslateX(360);
+        matorans.setTranslateY(30);
+        matorans.setPrefWidth(300);
+        matorans.setPrefHeight(550);       
+        
+        Button crossBreeds = new Button();
+        //matorans.setStyle("-fx-background-image: url(images/quit.png)");
+        crossBreeds.setTranslateX(720);
+        crossBreeds.setTranslateY(30);
+        crossBreeds.setPrefWidth(300);
+        crossBreeds.setPrefHeight(550);
+        
+        Button brotherhoodOfMakuta = new Button();
+        //matorans.setStyle("-fx-background-image: url(images/quit.png)");
+        brotherhoodOfMakuta.setTranslateX(1080);
+        brotherhoodOfMakuta.setTranslateY(30);
+        brotherhoodOfMakuta.setPrefWidth(300);
+        brotherhoodOfMakuta.setPrefHeight(550);
+        
+        root.getChildren().clear();
+        root.getChildren().add(leaderChoosingImage);
+        root.getChildren().add(tip);
+        root.getChildren().add(heroFactory);
+        root.getChildren().add(matorans);
+        root.getChildren().add(crossBreeds);
+        root.getChildren().add(brotherhoodOfMakuta);
+    }
+    
+    public void displayBiopedia() {
+        root.getChildren().clear();
+        
+    }
     private void handleMouseEvent(MouseEvent mevent) {
         if (mevent.getSource() == start) {
-           root.getChildren().clear();
+            displayLeaderChoosing();
         }
         if (mevent.getSource() == biopedia) {
-            root.getChildren().clear();
+            displayBiopedia();
         }
         if (mevent.getSource() == quit) {
             System.exit(0);

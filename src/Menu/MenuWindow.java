@@ -21,18 +21,13 @@ public class MenuWindow extends Application {
     private Button quit;
     private Creator creator;
     private Scene scene;
-    private boolean choosingLeader = false;
-    
+
     @Override
     public void start(Stage stage) throws Exception {
 
         creator = new Creator(root, start, settings, quit);
-        if(choosingLeader) {
-            scene = new Scene(creator.chooseLeader());
-        } else {
-            scene = new Scene(creator.createComponents());
-            
-        }
+
+        scene = new Scene(creator.displayMenu());
 
         stage.setScene(scene);
         stage.setTitle("Bionicle War");
@@ -49,14 +44,8 @@ public class MenuWindow extends Application {
         MediaPlayer mediaPlayer = new MediaPlayer(sound);
 
         mediaPlayer.play();
-        
+
         launch(MenuWindow.class);
     }
-    
-    public void setNewScene(String message) {
-        if(message.equals("choosing leader")) {
-            choosingLeader = true;
-        }
-        
-    }
+
 }
