@@ -105,7 +105,7 @@ public class Creator {
         
         //buttons
         Button heroFactory = new Button();
-        //matorans.setStyle("-fx-background-image: url(images/quit.png)");
+        heroFactory.setStyle("-fx-background-image: url(images/HEROFACTORYLEADER.jpg)");
         heroFactory.setTranslateX(0);
         heroFactory.setTranslateY(30);
         heroFactory.setPrefWidth(300);
