@@ -112,7 +112,7 @@ public class Creator {
         heroFactory.setPrefHeight(550);
 
         Button matorans = new Button();
-        //matorans.setStyle("-fx-background-image: url(images/quit.png)");
+        matorans.setStyle("-fx-background-image: url(images/Zdjecie.jpg)");
         matorans.setTranslateX(360);
         matorans.setTranslateY(30);
         matorans.setPrefWidth(300);
