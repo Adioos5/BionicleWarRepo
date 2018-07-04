@@ -119,14 +119,14 @@ public class Creator {
         matorans.setPrefHeight(550);       
         
         Button crossBreeds = new Button();
-        //matorans.setStyle("-fx-background-image: url(images/quit.png)");
+        crossBreeds.setStyle("-fx-background-image: url(images/CROSSBREEDS.png)");
         crossBreeds.setTranslateX(720);
         crossBreeds.setTranslateY(30);
         crossBreeds.setPrefWidth(300);
         crossBreeds.setPrefHeight(550);
         
         Button brotherhoodOfMakuta = new Button();
-        //matorans.setStyle("-fx-background-image: url(images/quit.png)");
+        brotherhoodOfMakuta.setStyle("-fx-background-image: url(images/Makuta.png)");
         brotherhoodOfMakuta.setTranslateX(1080);
         brotherhoodOfMakuta.setTranslateY(30);
         brotherhoodOfMakuta.setPrefWidth(300);
