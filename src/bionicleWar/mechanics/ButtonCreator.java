@@ -23,9 +23,15 @@ public class ButtonCreator {
         imageReader= new ImageReader();
     }
 
-    public Button initButton(String button) {
+    /**
+     * Initializes button depending on what button text will be passed to the parameter.
+     * @param buttonText
+     * @return button
+     */
+    
+    public Button initButton(String buttonText) {
 
-        if (button.equals("start")) {
+        if (buttonText.equals("start")) {
             start.setStyle("-fx-background-image: url(images/start.png)");
             start.setTranslateX(160);
             start.setTranslateY(500);
@@ -37,7 +43,7 @@ public class ButtonCreator {
             });
             return start;
         }
-        if (button.equals("biopedia")) {
+        if (buttonText.equals("biopedia")) {
             biopedia.setStyle("-fx-background-image: url(images/biopedia.png)");
             biopedia.setTranslateX(560);
             biopedia.setTranslateY(500);
@@ -49,7 +55,7 @@ public class ButtonCreator {
             });
             return biopedia;
         }
-        if (button.equals("quit")) {
+        if (buttonText.equals("quit")) {
             quit.setStyle("-fx-background-image: url(images/quit.png)");
             quit.setTranslateX(960);
             quit.setTranslateY(500);
@@ -61,7 +67,7 @@ public class ButtonCreator {
             });
             return quit;
         }
-        if (button.equals("heroFactory")) {
+        if (buttonText.equals("heroFactory")) {
             heroFactory.setStyle("-fx-background-image: url("+imageReader.getHeroFactoryLeaderImagePath()+")");
             heroFactory.setTranslateX(0);
             heroFactory.setTranslateY(30);
@@ -70,7 +76,7 @@ public class ButtonCreator {
 
             return heroFactory;
         }
-        if (button.equals("matorans")) {
+        if (buttonText.equals("matorans")) {
             matorans.setStyle("-fx-background-image: url("+imageReader.getMatoransLeaderImagePath()+")");
             matorans.setTranslateX(360);
             matorans.setTranslateY(30);
@@ -79,7 +85,7 @@ public class ButtonCreator {
 
             return matorans;
         }
-        if (button.equals("crossBreeds")) {
+        if (buttonText.equals("crossBreeds")) {
             crossBreeds.setStyle("-fx-background-image: url("+imageReader.getCrossbreedsLeaderImagePath()+")");
             crossBreeds.setTranslateX(720);
             crossBreeds.setTranslateY(30);
@@ -89,7 +95,7 @@ public class ButtonCreator {
            
             return crossBreeds;
         }
-        if (button.equals("brotherhoodOfMakuta")) {
+        if (buttonText.equals("brotherhoodOfMakuta")) {
             brotherhoodOfMakuta.setStyle("-fx-background-image: url("+imageReader.getTheBrotherHoodOfMakutaLeaderImagePath()+")");
             brotherhoodOfMakuta.setTranslateX(1080);
             brotherhoodOfMakuta.setTranslateY(30);

@@ -10,12 +10,18 @@ import javafx.util.Duration;
 public class MusicPlayer {
 
     private MusicReader musicReader = new MusicReader();
-    
+
+    /**
+     * Plays music depending on what song title will be passed to the parameter.
+     * 
+     * @param String
+     *            songTitle
+     */
     public void playMusic(String songTitle) {
         JFXPanel panel = new JFXPanel();
-        
-        if(songTitle.equals("Menu song")) {
-            
+
+        if (songTitle.equals("Menu song")) {
+
             String songPath = musicReader.getMenuMusicPath();
             Media sound = new Media(new File(songPath).toURI().toString());
             MediaPlayer mediaPlayer = new MediaPlayer(sound);
@@ -24,10 +30,10 @@ public class MusicPlayer {
                 @Override
                 public void run() {
                     mediaPlayer.seek(Duration.ZERO);
-                    
+
                 }
             });
-                
+
             mediaPlayer.play();
         }
     }

@@ -8,7 +8,10 @@ public class ImageViews {
     private ImageView menuBackground;
     private ImageView leaderChoosingBackground;
     private ImageView tipImage;
-    
+    /**
+     * 
+     * @return ImageView menuBackground
+     */
     public ImageView getMenuBackground() {
 
         menuBackground = new ImageView(new Image(imageReader.getMenuBackgroundPath()));
@@ -19,7 +22,10 @@ public class ImageViews {
         
         return menuBackground;
     }
-    
+    /**
+     * 
+     * @return ImageView leaderChoosingBackground
+     */
     public ImageView getLeaderChoosingBackground() {
         leaderChoosingBackground = new ImageView(new Image(imageReader.getLeaderChoosingWindowBackgroundPath()));
         leaderChoosingBackground.setX(0);
@@ -29,7 +35,10 @@ public class ImageViews {
         
         return leaderChoosingBackground;
     }
-    
+    /**
+     * 
+     * @return ImageView tipImage
+     */
     public ImageView getTipImage() {
         tipImage = new ImageView(new Image(imageReader.getTipBarPath()));
         tipImage.setX(0);

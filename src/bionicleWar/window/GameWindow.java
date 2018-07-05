@@ -13,7 +13,9 @@ public class GameWindow extends Application {
 
     private Scene scene;
 
-
+    /**
+     * Opens game window.
+     */
     public void run() {
 
         MusicPlayer musicPlayer = new MusicPlayer();
@@ -34,12 +36,6 @@ public class GameWindow extends Application {
         stage.setResizable(false);
         stage.setFullScreen(true);
         stage.show();
-    }
-
-    public void changeScene() {
-                          
-
-        scene = new Scene(changeRoot.displayLeaderChoosingWindow());
     }
 
 }

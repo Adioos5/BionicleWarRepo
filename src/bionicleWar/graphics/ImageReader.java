@@ -17,43 +17,73 @@ public class ImageReader {
     private String leaderChoosingWindowBackgroundPath = "images/leaderChoosingImage.jpg";
 
     
-    
+    /**
+     * 
+     * @return biopediaButtonPath
+     */
     public String getBiopediaButtonPath() {
         return biopediaButtonPath;
     }
-
+    /**
+     * 
+     * @return  startButtonPath
+     */
     public String getStartButtonPath() {
         return startButtonPath;
     }
-
+    /**
+     * 
+     * @return  quitButtonPath
+     */
     public String getQuitButtonPath() {
         return quitButtonPath;
     }
-
+    /**
+     * 
+     * @return heroFactoryLeaderImagePath
+     */
     public String getHeroFactoryLeaderImagePath() {
         return heroFactoryLeaderImagePath;
     }
-
+    /**
+     * 
+     * @return matoransLeaderImagePath
+     */
     public String getMatoransLeaderImagePath() {
         return matoransLeaderImagePath;
     }
-
+    /**
+     * 
+     * @return crossbreedsLeaderImagePath
+     */
     public String getCrossbreedsLeaderImagePath() {
         return crossbreedsLeaderImagePath;
     }
-
+    /**
+     * 
+     * @return theBrotherHoodOfMakutaLeaderImagePath
+     */
     public String getTheBrotherHoodOfMakutaLeaderImagePath() {
         return theBrotherHoodOfMakutaLeaderImagePath;
     }
-
+    /**
+     * 
+     * @return tipBarPath
+     */
     public String getTipBarPath() {
         return tipBarPath;
     }
-
+    /**
+     * 
+     * @return  menuBackgroundPath
+     */
     public String getMenuBackgroundPath() {
         return menuBackgroundPath;
     }
-
+    /**
+     * 
+     * @return leaderChoosingWindowBackgroundPath
+     */
     public String getLeaderChoosingWindowBackgroundPath() {
         return leaderChoosingWindowBackgroundPath;
     }

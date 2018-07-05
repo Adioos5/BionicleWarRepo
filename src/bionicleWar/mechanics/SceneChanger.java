@@ -8,12 +8,12 @@ import javafx.stage.Stage;
 
 public class SceneChanger {
 
-    private Pane root;    
-    
+    private Pane root;
+
     private ImageView menuBackground;
     private ImageView leaderChoosingBackground;
     private ImageView tipImage;
-    
+
     private Button start;
     private Button biopedia;
     private Button quit;
@@ -21,62 +21,75 @@ public class SceneChanger {
     private Button matorans;
     private Button crossBreeds;
     private Button brotherhoodOfMakuta;
-    
+
     private ImageViews imageViews;
     private ButtonCreator buttonCreator;
-    
-    
+
     public SceneChanger(Stage stage) {
-        imageViews= new ImageViews();    
-        buttonCreator= new ButtonCreator(stage);
+        imageViews = new ImageViews();
+        buttonCreator = new ButtonCreator(stage);
     }
-    
-    
-    public Pane displayMenu() {        
+
+    /**
+     * Displays game menu by adding needed resources to the root.
+     * 
+     * @return root
+     */
+    public Pane displayMenu() {
 
         root = new Pane();
-                
-        menuBackground = imageViews.getMenuBackground(); 
-                
+
+        menuBackground = imageViews.getMenuBackground();
+
         start = buttonCreator.initButton("start");
-        
+
         biopedia = buttonCreator.initButton("biopedia");
 
         quit = buttonCreator.initButton("quit");
-    
+
         root.getChildren().add(menuBackground);
         root.getChildren().add(start);
         root.getChildren().add(biopedia);
         root.getChildren().add(quit);
-        
-        return root;        
+
+        return root;
     }
-    
+
+    /**
+     * Displays leader choosing window by adding needed resources to the root.
+     * 
+     * @return root
+     */
     public Pane displayLeaderChoosingWindow() {
-        
+
         root = new Pane();
-        
+
         leaderChoosingBackground = imageViews.getLeaderChoosingBackground();
         tipImage = imageViews.getTipImage();
-        
+
         heroFactory = buttonCreator.initButton("heroFactory");
         matorans = buttonCreator.initButton("matorans");
         crossBreeds = buttonCreator.initButton("crossBreeds");
         brotherhoodOfMakuta = buttonCreator.initButton("brotherhoodOfMakuta");
-        
+
         root.getChildren().add(leaderChoosingBackground);
         root.getChildren().add(tipImage);
         root.getChildren().add(heroFactory);
         root.getChildren().add(matorans);
         root.getChildren().add(crossBreeds);
         root.getChildren().add(brotherhoodOfMakuta);
-        
+
         return root;
     }
-    
+
+    /**
+     * Displays biopedia by adding needed resources to the root.
+     * 
+     * @return root
+     */
     public Pane displayBiopedia() {
         root = new Pane();
-        
+
         return root;
     }
 }
