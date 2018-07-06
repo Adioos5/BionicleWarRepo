@@ -14,12 +14,12 @@ public class GameWindow extends Application {
     private Scene scene;
 
     /**
-     * Opens game window.
+     * Opens game window and starts playing music.
      */
     public void run() {
 
         MusicPlayer musicPlayer = new MusicPlayer();
-        musicPlayer.playMusic("Menu song");
+        musicPlayer.randomMusic();
 
         launch(GameWindow.class);
     }
