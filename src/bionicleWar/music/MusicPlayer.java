@@ -16,7 +16,7 @@ public class MusicPlayer {
      */
     public void randomMusic() {
         int number = (int) (Math.random() * 10);
-
+        
         if (number == 0 || number == 1 || number == 2) {
             playMusic("Only One Survives");
         }        

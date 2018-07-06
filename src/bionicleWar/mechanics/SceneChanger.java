@@ -13,7 +13,8 @@ public class SceneChanger {
     private ImageView menuBackground;
     private ImageView leaderChoosingBackground;
     private ImageView tipImage;
-
+    
+    private Button backL;
     private Button start;
     private Button biopedia;
     private Button quit;
@@ -67,6 +68,7 @@ public class SceneChanger {
         leaderChoosingBackground = imageViews.getLeaderChoosingBackground();
         tipImage = imageViews.getTipImage();
 
+        backL = buttonCreator.initButton("backL");
         heroFactory = buttonCreator.initButton("heroFactory");
         matorans = buttonCreator.initButton("matorans");
         crossBreeds = buttonCreator.initButton("crossBreeds");
@@ -74,6 +76,7 @@ public class SceneChanger {
 
         root.getChildren().add(leaderChoosingBackground);
         root.getChildren().add(tipImage);
+        root.getChildren().add(backL);
         root.getChildren().add(heroFactory);
         root.getChildren().add(matorans);
         root.getChildren().add(crossBreeds);

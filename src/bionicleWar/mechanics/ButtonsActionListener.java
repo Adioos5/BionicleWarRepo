@@ -11,14 +11,17 @@ public class ButtonsActionListener {
     private Button start;
     private Button biopedia;
     private Button quit;
+    private Button backL;
+    
     private Stage stage;
 
-    public ButtonsActionListener(Stage stage, Button start, Button biopedia, Button quit) {
+    public ButtonsActionListener(Stage stage, Button start, Button biopedia, Button quit, Button backL) {
 
         this.stage = stage;
         this.start = start;
         this.biopedia = biopedia;
         this.quit = quit;
+        this.backL = backL;
 
     }
 
@@ -34,17 +37,18 @@ public class ButtonsActionListener {
         SceneChanger changeScene = new SceneChanger(stage);
 
         if (mevent.getSource() == start) {
-            stage.setScene(new Scene(changeScene.displayLeaderChoosingWindow()));
-            stage.setFullScreen(true);
+            stage.setScene(new Scene(changeScene.displayLeaderChoosingWindow()));         
         }
         if (mevent.getSource() == biopedia) {
-            stage.setScene(new Scene(changeScene.displayBiopedia()));
-            stage.setFullScreen(true);
-
+            stage.setScene(new Scene(changeScene.displayBiopedia()));     
         }
         if (mevent.getSource() == quit) {
             System.exit(0);
         }
+        if (mevent.getSource() == backL) {
+            stage.setScene(new Scene(changeScene.displayMenu()));            
+        }
+        stage.setFullScreen(true);
     }
 
 }
