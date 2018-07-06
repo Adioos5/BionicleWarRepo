@@ -17,7 +17,7 @@ public class MusicPlayer {
     public void randomMusic() {
         int number = (int) (Math.random() * 10);
         
-        if (number == 0 || number == 1 || number == 2) {
+        if (number == 1 || number == 2) {
             playMusic("Only One Survives");
         }        
         if (number == 3 || number == 4) {
@@ -29,7 +29,7 @@ public class MusicPlayer {
         if (number == 7 || number == 8) {
             playMusic("All Who Follow");
         }
-        if (number == 9 || number == 10) {
+        if (number == 9 || number == 0) {
             playMusic("Friends In High Places");
         }
     }
