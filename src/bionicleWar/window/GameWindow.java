@@ -4,13 +4,14 @@ import bionicleWar.mechanics.SceneChanger;
 import bionicleWar.music.MusicPlayer;
 import javafx.application.Application;
 import javafx.scene.Scene;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 public class GameWindow extends Application {
 
     
-    private SceneChanger changeRoot;             
-
+    private SceneChanger changeScene;             
+    private Pane root;
     private Scene scene;
 
     /**
@@ -26,15 +27,16 @@ public class GameWindow extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        changeRoot = new SceneChanger(stage); 
-        
-        scene = new Scene(changeRoot.displayMenu());
+        changeScene = new SceneChanger(stage); 
+        root = new Pane();
+        changeScene.displayMenu(root);
+        scene = new Scene(root);
 
         stage.setScene(scene);
-        
+        stage.setFullScreen(true);
         stage.setTitle("Bionicle War");
         stage.setResizable(false);
-        stage.setFullScreen(true);
+        
         stage.show();
     }
 

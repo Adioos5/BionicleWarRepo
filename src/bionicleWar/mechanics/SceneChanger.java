@@ -1,6 +1,7 @@
 package bionicleWar.mechanics;
 
 import bionicleWar.graphics.ImageViews;
+import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
@@ -36,10 +37,10 @@ public class SceneChanger {
      * 
      * @return root
      */
-    public Pane displayMenu() {
+    public void displayMenu(Pane root) {
 
-        root = new Pane();
-
+        root.getChildren().clear();
+        
         menuBackground = imageViews.getMenuBackground();
 
         start = buttonCreator.initButton("start");
@@ -52,8 +53,7 @@ public class SceneChanger {
         root.getChildren().add(start);
         root.getChildren().add(biopedia);
         root.getChildren().add(quit);
-
-        return root;
+        
     }
 
     /**
@@ -61,10 +61,10 @@ public class SceneChanger {
      * 
      * @return root
      */
-    public Pane displayLeaderChoosingWindow() {
-
-        root = new Pane();
-
+    public void displayLeaderChoosingWindow(Pane root) {        
+        
+        root.getChildren().clear();
+        
         leaderChoosingBackground = imageViews.getLeaderChoosingBackground();
         tipImage = imageViews.getTipImage();
 
@@ -82,7 +82,7 @@ public class SceneChanger {
         root.getChildren().add(crossBreeds);
         root.getChildren().add(brotherhoodOfMakuta);
 
-        return root;
+        
     }
 
     /**
@@ -90,9 +90,10 @@ public class SceneChanger {
      * 
      * @return root
      */
-    public Pane displayBiopedia() {
-        root = new Pane();
+    public void displayBiopedia(Pane root) {
+        
+        root.getChildren().clear();
 
-        return root;
+        
     }
 }
