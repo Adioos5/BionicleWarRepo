@@ -1,15 +1,12 @@
 package bionicleWar.mechanics;
 
 import bionicleWar.graphics.ImageViews;
-import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
-public class SceneChanger {
-
-    private Pane root;
+public class RootModifier {
 
     private ImageView menuBackground;
     private ImageView leaderChoosingBackground;
@@ -27,7 +24,7 @@ public class SceneChanger {
     private ImageViews imageViews;
     private ButtonCreator buttonCreator;
 
-    public SceneChanger(Stage stage) {
+    public RootModifier(Stage stage) {
         imageViews = new ImageViews();
         buttonCreator = new ButtonCreator(stage);
     }

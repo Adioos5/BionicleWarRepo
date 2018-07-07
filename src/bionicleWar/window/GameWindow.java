@@ -1,6 +1,6 @@
 package bionicleWar.window;
 
-import bionicleWar.mechanics.SceneChanger;
+import bionicleWar.mechanics.RootModifier;
 import bionicleWar.music.MusicPlayer;
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -10,7 +10,7 @@ import javafx.stage.Stage;
 public class GameWindow extends Application {
 
     
-    private SceneChanger changeScene;             
+    private RootModifier modifyRoot;             
     private Pane root;
     private Scene scene;
 
@@ -27,9 +27,10 @@ public class GameWindow extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        changeScene = new SceneChanger(stage); 
+        modifyRoot = new RootModifier(stage);
         root = new Pane();
-        changeScene.displayMenu(root);
+        
+        modifyRoot.displayMenu(root);
         scene = new Scene(root);
 
         stage.setScene(scene);

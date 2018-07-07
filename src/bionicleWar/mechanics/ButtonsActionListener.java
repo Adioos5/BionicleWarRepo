@@ -1,7 +1,5 @@
 package bionicleWar.mechanics;
 
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
@@ -35,21 +33,21 @@ public class ButtonsActionListener {
      */
     public void handleMouseEvent(MouseEvent mevent) {
 
-        SceneChanger changeScene = new SceneChanger(stage);
+        RootModifier modifyRoot = new RootModifier(stage);
+        
         if (mevent.getSource() == start) {    
-            changeScene.displayLeaderChoosingWindow((Pane) stage.getScene().getRoot());
-            
+            modifyRoot.displayLeaderChoosingWindow((Pane) stage.getScene().getRoot());           
         }
         if (mevent.getSource() == biopedia) {
-            changeScene.displayBiopedia((Pane) stage.getScene().getRoot());  
+            modifyRoot.displayBiopedia((Pane) stage.getScene().getRoot());  
         }
         if (mevent.getSource() == quit) {
             System.exit(0);
         }
         if (mevent.getSource() == backL) {
-            changeScene.displayMenu((Pane) stage.getScene().getRoot());            
+            modifyRoot.displayMenu((Pane) stage.getScene().getRoot());            
         }
-        stage.setFullScreen(true);
+     
     }
 
 }
